@@ -19,9 +19,32 @@
     <style>
 /*@media (min-width: 1200px)*/
     .container {
-        width: 719px;
+        max-width: 719px;
     }      
 
+    .darkBlue {
+      background-color: blue
+    }
+    .lightBlue {
+      background-color: #58c1d3
+    }
+
+    .col-lg-3 {
+      padding-top:10px;
+      padding-bottom:10px;
+    }
+
+    /* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+/*@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: @screen-md-min) { ... }*/
+
+/* Large devices (large desktops, 1200px and up) */
+/*@media (min-width: @screen-lg-min) { ... }*/
     /*#red {
         height:20px;
         background-color: red;
@@ -55,9 +78,8 @@
   </head>
   <body>
   <div class="container">
-    <div class="row">
+<!--     <div class="row">
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" id="red">
-        <!-- <h1>Hello, world!</h1> -->              
         <img src="images/twelve.png" />
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" id="blue">
@@ -71,7 +93,6 @@
       </div>
 
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" id="red">
-        <!-- <h1>Hello, world!</h1> -->              
         <img src="images/eleven.png" />
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" id="blue">
@@ -85,7 +106,6 @@
       </div>
 
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" id="red">
-        <!-- <h1>Hello, world!</h1> -->              
         <img src="images/ten.png" />
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" id="blue">
@@ -99,6 +119,66 @@
       </div>
 
     </div>
+ -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 darkBlue">
+        col-lg-3
+        <div class="row">
+          <div class="col-lg-3 col-md-12 lightBlue">
+            <img src="images/twelve.png" />
+         </div>
+          <div class="col-lg-3 col-md-12 lightBlue">
+            <img src="images/eleven.png" />
+          </div>
+          <div class="col-lg-3 col-md-12 lightBlue">
+            <img src="images/ten.png" />
+          </div>
+        </div>
+      </div> 
+      <div class="col-xs-12 col-sm-3 darkBlue">
+
+        col-lg-3
+        <div class="row">
+          <div class="col-lg-3 col-md-12 lightBlue">
+            <img src="images/nine.png" />
+          </div>
+          <div class="col-lg-3 col-md-12 lightBlue">
+            <img src="images/eight.png" />
+          </div>
+          <div class="col-lg-3 col-md-12 lightBlue">
+            <img src="images/seven.png" />
+          </div>
+        </div>
+      </div> 
+      <div class="col-xs-12 col-sm-3 darkBlue">
+        col-lg-3
+        <div class="row">
+          <div class="col-lg-3 col-md-12 lightBlue">
+            <img src="images/six.png" />
+          </div>
+          <div class="col-lg-3 col-md-12 lightBlue">
+            <img src="images/five.png" />
+          </div>
+          <div class="col-lg-3 col-md-12 lightBlue">
+            <img src="images/four.png" />
+          </div>
+        </div>
+      </div> 
+      <div class="col-xs-12 col-sm-3 darkBlue">
+        col-lg-3
+        <div class="row">
+          <div class="col-lg-3 col-md-12 lightBlue">
+            <img src="images/three.png" />
+          </div>
+          <div class="col-lg-3 col-md-12 lightBlue">
+            <img src="images/two.png" />
+          </div>
+          <div class="col-lg-3 col-md-12 lightBlue">
+            <img src="images/one.png" />
+          </div>
+        </div>
+      </div> 
+    </div> 
   </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
