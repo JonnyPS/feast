@@ -39,19 +39,30 @@ html, body {
       z-index: -1;
     }*/
     .cornerImg {
-      bottom: 9px;
-      right: 4px;
+      bottom: 10px;
+      left: 141px;
+      width:24px;
+      height:auto;
       position: absolute;
-      z-index: 1;
+      z-index: 2;
+      opacity:0;
     }
     .imgContainer {
       padding: 0;
       margin: 0;
       width:150px;
       height: 150px;
-    }
+      -moz-border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -o-border-radius: 20px;
+      }
     .dayImg {
       position: absolute;
+      z-index:1;
+    }
+   .bgImg {
+      position: absolute;
+      z-index:0;
     }
 
     
@@ -127,6 +138,14 @@ html, body {
   .container {
     width:768px;
   }
+  .cornerImg {
+    bottom: 10px;
+    right: -8px;
+    width:24px;
+    height:auto;
+    position: absolute;
+    z-index: 2;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) 
@@ -197,12 +216,16 @@ html, body {
           <div class="col-xs-12 col-sm-6">
             <div class="col-xs-12 col-sm-12">
               <div class="imgContainer">
-              <img src="images/twelveCornerImage.png" class="cornerImg" />
+                <img src="images/twelveCornerImage.png" class="cornerImg" />
                 <img src="images/twelve.png" class="dayImg" />
+                <img src="images/twelveBgImage.png" class="bgImg" />
               </div>
             </div>
             <div class="col-xs-12 col-sm-12">
-              <img src="images/eleven.png" />
+              <div class="imgContainer">
+                <img src="images/elevenCornerImage.png" class="cornerImg" />
+                <img src="images/eleven.png" class="dayImg" />
+              </div>
             </div>
             <div class="col-xs-12 col-sm-12">
               <img src="images/ten.png" />
