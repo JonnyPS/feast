@@ -23,7 +23,7 @@ html, body {
   width: 100%;
   margin: 0;
 }
-    canvas {
+/*    canvas {
       background-color: #07092a;
       position: absolute;
       top:0;
@@ -31,7 +31,27 @@ html, body {
       width:100%;
       height:100%;
       z-index: -1;
-    }
+    }*/
+
+.canvasContainer
+{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 100px;
+    bottom: 100px;
+    z-index: 1;
+    background-color: Black;
+}
+
+.contextCanvas
+{   position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
 
 #headerImg {
   width:100%;
@@ -274,7 +294,10 @@ html, body {
  -->
   </div>
 
-  <canvas id="canvas"></canvas>
+  <!-- <canvas id="canvas"></canvas> -->
+ <div class="canvasContainer">
+    <canvas class="contextCanvas" id="canvas"></canvas>
+</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="snow.js"></script>
