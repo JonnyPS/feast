@@ -19,98 +19,70 @@
     <style>
 /*@media (min-width: 1200px)*/
 
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
-
-.container {
-  padding-top: 30px;
-  padding-bottom: 60px;
-}
-/*    canvas {
-      background-color: #07092a;
-      position: absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      z-index: -1;
-    }*/
-    .cornerImg {
-      bottom: 10px;
-      left: 141px;
-      width:24px;
-      height:auto;
-      position: absolute;
-      z-index: 2;
-      opacity:0;
-    }
-    .imgContainer {
-      padding: 0;
-      margin: 0;
-      width:150px;
-      height: 150px;
-      -moz-border-radius: 20px;
-      -webkit-border-radius: 20px;
-      -o-border-radius: 20px;
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
       }
-    .dayImg {
+
+      .container {
+        padding-top: 30px;
+        padding-bottom: 60px;
+      }
+
+      .cornerImg {
+        bottom: 10px;
+        left: 141px;
+        width:24px;
+        height:auto;
+        position: absolute;
+        z-index: 2;
+        opacity:0;
+      }
+      .imgContainer {
+        padding: 0;
+        margin: 0;
+        width:150px;
+        height: 150px;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -o-border-radius: 20px;
+        }
+      .dayImg {
+        position: absolute;
+        z-index:1;
+      }
+      .bgImg {
+        position: absolute;
+        z-index:0;
+      }
+
+    .canvasContainer {
+      position: fixed;
+      left: 0px;
+      right: 0px;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      background-color: #11162a;
+    }
+
+    .contextCanvas {
       position: absolute;
-      z-index:1;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      z-index: -1;
     }
-   .bgImg {
-      position: absolute;
-      z-index:0;
+
+    canvas {
+        background-image: url("images/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: auto 100% ;
     }
-
-    
-
-
-.canvasContainer
-{
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    background-color: #11162a;
-}
-
-.contextCanvas
-{   position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-}
-
-#headerImg {
-  width:100%;
-}
-
-  img {
-    align:center;
-  }
-   /* .container {
-      width:400px;
-        max-width: 719px;
-    }    */  
-
-    .grey {
-      background-color: #aeaeae;
-      /*height:20px;*/
-    }
-    .darkBlue {
-      background-color: blue
-      height:20px;
-    }
-    .lightBlue {
-      background-color: #58c1d3
-      height:20px;
+    #headerImg {
+      width:100%;
     }
 
     .col-xs-12, .col-sm-6 {
@@ -123,14 +95,10 @@ html, body {
       .container {
         width:400px;
       }
-  /*    .headerRow {
-        padding-top:20px;
-      }
-*/
     }
 
 
-    /* Extra small devices (phones, less than 768px) */
+/* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
