@@ -1,6 +1,5 @@
-# HTML5-Video-Player
-A HTML5 video player using JQuery and JQueryUI for the controls.
+# Feast Coding Test
 
 #Preview here:
 
-http://htmlpreview.github.io/?https://github.com/JonnyPS/HTML5-Video-Player/blob/master/index.html
+http://htmlpreview.github.io/?https://github.com/JonnyPS/feast/blob/master/index.html
