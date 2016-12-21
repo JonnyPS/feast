@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Feast Coding Test</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -17,17 +17,14 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-/*@media (min-width: 1200px)*/
-
       html, body {
         height: 100%;
         width: 100%;
         margin: 0;
-        /*background-color: #*/
       }
 
       .container {
-        padding-top: 30px;
+        padding-top: 20px;
         padding-bottom: 60px;
       }
 
@@ -40,6 +37,7 @@
         z-index: 2;
         opacity:0;
       }
+
       .imgContainer {
         padding: 0;
         margin: 0;
@@ -49,109 +47,72 @@
         -webkit-border-radius: 20px;
         -o-border-radius: 20px;
         opacity: 0;
-        }
+      }
+
       .dayImg {
         position: absolute;
         z-index:1;
       }
+
       .bgImg {
         position: absolute;
         z-index:0;
       }
 
-    .canvasContainer {
-      position: fixed;
-      left: 0px;
-      right: 0px;
-      top: 0;
-      bottom: 0;
-      z-index: -1;
-      background-color: #11162a;
-    }
-
-    .contextCanvas {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0px;
-      top: 0px;
-      z-index: -1;
-    }   
-    #headerImg {
-      width:100%;
-    }
-
-    canvas {
-      background-image: url('images/bg.jpg');
-      background-repeat: no-repeat;
-      background-size:auto 100%;
-    }
-
-    .col-xs-12, .col-sm-6 {
-      padding-top:10px;
-      padding-bottom:10px;
-    }
-
-
-    @media (max-width: 768px) {
-      .container {
-        width:400px;
+      .canvasContainer {
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        background-color: #11162a;
       }
-    }
 
+      .contextCanvas {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+      }   
 
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { 
-  .container {
-    width:768px;
-  }
-  .cornerImg {
-    bottom: 10px;
-    right: -8px;
-    width:24px;
-    height:auto;
-    position: absolute;
-    z-index: 2;
-  }
-}
-
-/* Medium devices (desktops, 992px and up) 
-/*@media (min-width: @screen-md-min) { ... }*/
-
-/* Large devices (large desktops, 1200px and up) */
-/*@media (min-width: @screen-lg-min) { ... }*/
-    /*#red {
-        height:20px;
-        background-color: red;
+      #headerImg {
+        width:100%;
       }
-       #blue {
-        height:20px;
 
-        background-color: blue;
+      canvas {
+        background-image: url('images/bg.jpg');
+        background-repeat: no-repeat;
+        background-size:auto 100%;
       }
-       #yellow {
-        height:20px;
 
-        background-color: yellow;
+      .col-xs-12, .col-sm-6 {
+        padding-top:10px;
+        padding-bottom:10px;
       }
-      #green {
-        height:20px;
 
-        background-color: green;
-      }*/
-/*      .container {
-        width:960px;
-        margin:0 auto;
-        border:1px #ccc solid;
-      }*/
-/*
-      .col:not(:first-child,:last-child) {
-        padding-right:7px;
-        padding-left:7px;
-      }*/
+      @media (max-width: 768px) {
+        .container {
+          width:400px;
+        }
+      }
+
+      /* Small devices (tablets, 768px and up) */
+      @media (min-width: 768px) { 
+        .container {
+          width:768px;
+        }
+        .cornerImg {
+          bottom: 10px;
+          right: -8px;
+          width:24px;
+          height:auto;
+          position: absolute;
+          z-index: 2;
+        }
+      }
 
       .topCornerImg {
         position: absolute;
@@ -166,179 +127,132 @@
       }
     </style>
   </head>
+  
   <body>
+    <div class="container">
 
-  <div class="container">
+      <div class="row headerRow">
+        <div class="col-xs-12">
+          <img src="images/logo.png" />    
+        </div>
+        <div class="col-xs-12 col-sm-11">
+          <img id="headerImg" src="images/header.png" />    
+        </div>
+      </div>
 
-    <div class="row headerRow">
-      <div class="col-xs-12">
-        <img src="images/logo.png" />    
-      </div>
-      <div class="col-xs-12 col-sm-11">
-        <img id="headerImg" src="images/header.png" />    
-      </div>
+      <div class="row">
+        <!-- left column -->
+        <div class="col-xs-6 col-sm-6 darkBlue">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <div class="col-xs-12 col-sm-12">
+                <div class="imgContainer">
+                  <img src="images/twelveCornerImage.png" class="cornerImg" />
+                  <img src="images/twelve.png" class="dayImg" />
+                  <img src="images/twelveBgImage.png" class="bgImg" />
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                <div class="imgContainer">
+                  <img src="images/elevenCornerImage.png" class="cornerImg" />
+                  <img src="images/eleven.png" class="dayImg" />
+                  <img src="images/elevenBgImage.png" class="bgImg" />
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                 <div class="imgContainer">
+                  <img src="images/tenCornerImage.png" class="cornerImg" />
+                  <img src="images/ten.png" class="dayImg" />
+                  <img src="images/tenBgImage.png" class="bgImg" />
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12  col-sm-6">
+              <div class="col-xs-12 col-sm-12">
+                 <div class="imgContainer">
+                  <img src="images/nineCornerImage.png" class="cornerImg" />
+                  <img src="images/nine.png" class="dayImg" />
+                  <img src="images/nineBgImage.png" class="bgImg" />
+                </div>            
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                <div class="imgContainer">
+                  <img src="images/eightCornerImage.png" class="cornerImg" />
+                  <img src="images/eight.png" class="dayImg" />
+                  <img src="images/eightBgImage.png" class="bgImg" />
+                </div>               
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                <div class="imgContainer">
+                  <img src="images/sevenCornerImage.png" class="cornerImg" />
+                  <img src="images/seven.png" class="dayImg" />
+                  <img src="images/sevenBgImage.png" class="bgImg" />
+                </div>   
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- right column -->
+        <div class="col-xs-6 col-sm-6 darkBlue">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <div class="col-xs-12 col-sm-12">
+                <div class="imgContainer">
+                  <img src="images/sixCornerImage.png" class="cornerImg" />
+                  <img src="images/six.png" class="dayImg" />
+                  <img src="images/sixBgImage.png" class="bgImg" />
+                </div>   
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                <div class="imgContainer">
+                  <img src="images/fiveCornerImage.png" class="cornerImg" />
+                  <img src="images/five.png" class="dayImg" />
+                  <img src="images/fiveBgImage.png" class="bgImg" />
+                </div>               
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                <div class="imgContainer">
+                  <img src="images/fourCornerImage.png" class="cornerImg" />
+                  <img src="images/four.png" class="dayImg" />
+                  <img src="images/fourBgImage.png" class="bgImg" />
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12  col-sm-6">
+              <div class="col-xs-12 col-sm-12">
+                <div class="imgContainer">
+                  <img src="images/threeCornerImage.png" class="cornerImg" />
+                  <img src="images/three.png" class="dayImg" />
+                  <img src="images/threeBgImage.png" class="bgImg" />
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                <div class="imgContainer">
+                  <img src="images/twoCornerImage.png" class="cornerImg" />
+                  <img src="images/two.png" class="dayImg" />
+                  <img src="images/twoBgImage.png" class="bgImg" />
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                <div class="imgContainer">
+                  <img src="images/oneCornerImage.png" class="cornerImg" />
+                  <img src="images/one.png" class="dayImg" />
+                  <img src="images/oneBgImage.png" class="bgImg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
     </div>
 
-    <div class="row">
-      <!-- left column -->
-      <div class="col-xs-6 col-sm-6 darkBlue">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6">
-            <div class="col-xs-12 col-sm-12">
-              <div class="imgContainer">
-                <img src="images/twelveCornerImage.png" class="cornerImg" />
-                <img src="images/twelve.png" class="dayImg" />
-                <img src="images/twelveBgImage.png" class="bgImg" />
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-12">
-              <div class="imgContainer">
-                <img src="images/elevenCornerImage.png" class="cornerImg" />
-                <img src="images/eleven.png" class="dayImg" />
-                <img src="images/elevenBgImage.png" class="bgImg" />
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-12">
-               <div class="imgContainer">
-                <img src="images/tenCornerImage.png" class="cornerImg" />
-                <img src="images/ten.png" class="dayImg" />
-                <img src="images/tenBgImage.png" class="bgImg" />
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12  col-sm-6">
-            <div class="col-xs-12 col-sm-12">
-               <div class="imgContainer">
-                <img src="images/nineCornerImage.png" class="cornerImg" />
-                <img src="images/nine.png" class="dayImg" />
-                <img src="images/nineBgImage.png" class="bgImg" />
-              </div>            
-            </div>
-            <div class="col-xs-12 col-sm-12">
-              <div class="imgContainer">
-                <img src="images/eightCornerImage.png" class="cornerImg" />
-                <img src="images/eight.png" class="dayImg" />
-                <img src="images/eightBgImage.png" class="bgImg" />
-              </div>               
-            </div>
-            <div class="col-xs-12 col-sm-12">
-              <div class="imgContainer">
-                <img src="images/sevenCornerImage.png" class="cornerImg" />
-                <img src="images/seven.png" class="dayImg" />
-                <img src="images/sevenBgImage.png" class="bgImg" />
-              </div>   
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- right column -->
-      <div class="col-xs-6 col-sm-6 darkBlue">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6">
-            <div class="col-xs-12 col-sm-12">
-              <div class="imgContainer">
-                <img src="images/sixCornerImage.png" class="cornerImg" />
-                <img src="images/six.png" class="dayImg" />
-                <img src="images/sixBgImage.png" class="bgImg" />
-              </div>   
-            </div>
-            <div class="col-xs-12 col-sm-12">
-              <div class="imgContainer">
-                <img src="images/fiveCornerImage.png" class="cornerImg" />
-                <img src="images/five.png" class="dayImg" />
-                <img src="images/fiveBgImage.png" class="bgImg" />
-              </div>               
-            </div>
-            <div class="col-xs-12 col-sm-12">
-              <div class="imgContainer">
-                <img src="images/fourCornerImage.png" class="cornerImg" />
-                <img src="images/four.png" class="dayImg" />
-                <img src="images/fourBgImage.png" class="bgImg" />
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12  col-sm-6">
-            <div class="col-xs-12 col-sm-12">
-              <div class="imgContainer">
-                <img src="images/threeCornerImage.png" class="cornerImg" />
-                <img src="images/three.png" class="dayImg" />
-                <img src="images/threeBgImage.png" class="bgImg" />
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-12">
-              <div class="imgContainer">
-                <img src="images/twoCornerImage.png" class="cornerImg" />
-                <img src="images/two.png" class="dayImg" />
-                <img src="images/twoBgImage.png" class="bgImg" />
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-12">
-              <div class="imgContainer">
-                <img src="images/oneCornerImage.png" class="cornerImg" />
-                <img src="images/one.png" class="dayImg" />
-                <img src="images/oneBgImage.png" class="bgImg" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-<!-- 
-      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 darkBlue">
-        col-lg-3
-        <div class="row">
-          <div class="col-lg-12 col-md-12 lightBlue">
-            <img src="images/nine.png" />
-          </div> 
-          <div class="col-lg-12 col-md-12 lightBlue">
-            <img src="images/eight.png" />
-          </div>
-          <div class="col-lg-12 col-md-12 lightBlue">
-            <img src="images/seven.png" />
-          </div>
-        </div>
-      </div> 
- -->
-<!--       <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 darkBlue">
-        col-lg-3
-        <div class="row">
-          <div class="col-lg-12 col-md-12 lightBlue">
-            <img src="images/six.png" />
-          </div>
-          <div class="col-lg-12 col-md-12 lightBlue">
-            <img src="images/five.png" />
-          </div>
-          <div class="col-lg-12 col-md-12 lightBlue">
-            <img src="images/four.png" />
-          </div>
-        </div>
-      </div> 
-
-      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 darkBlue">
-        col-lg-3
-        <div class="row">
-          <div class="col-lg-12 col-md-12 lightBlue">
-            <img src="images/three.png" />
-          </div>
-          <div class="col-lg-12 col-md-12 lightBlue">
-            <img src="images/two.png" />
-          </div>
-          <div class="col-lg-12 col-md-12 lightBlue">
-            <img src="images/one.png" />
-          </div>
-        </div>
-      </div> 
-    </div> 
- -->
-  </div>
-
-  <!-- <canvas id="canvas"></canvas> -->
- <div class="canvasContainer">
-    <img class="topCornerImg" src="images/topCorner.png" />
-    <img class="bottomCornerImg" src="images/bottomCorner.png" />
-    <canvas class="contextCanvas" id="canvas"></canvas>
-</div>
+    <!-- <canvas id="canvas"></canvas> -->
+    <div class="canvasContainer">
+      <img class="topCornerImg" src="images/topCorner.png" />
+      <img class="bottomCornerImg" src="images/bottomCorner.png" />
+      <canvas class="contextCanvas" id="canvas"></canvas>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
